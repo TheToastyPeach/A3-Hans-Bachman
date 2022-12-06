@@ -1,0 +1,12 @@
+
+body {
+    margin: 10px;
+    background-color: gray;
+}
+
+.wrap {
+    padding: 0px;
+    display: grid;
+    justify-content: center;
+    background-color: #301A4B;
+}
