@@ -1,12 +1,28 @@
 
 body {
     margin: 10px;
-    background-color: gray;
+    font-family: 'Lato', sans-serif;
 }
 
 .wrap {
     padding: 0px;
     display: grid;
     justify-content: center;
-    background-color: #301A4B;
 }
+
+h1 {
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+/* #F0EBD8 #748CAB #3E5C76 #1D2D44 #0D1321
+ */
