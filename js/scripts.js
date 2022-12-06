@@ -3,29 +3,36 @@ var input = "";
 var aiInput = 0;
 var displayedChoice = ["./imgs/head1.png", "./imgs/head2.png", "./imgs/head3.png"];
 
-// get user value
+// get user value & mutes the buttons
 function buttonPress(clicked) {
     switch(clicked) {
     case "Rock":
         input = 0;
+        $("#button #paperbutton, #scissorsbutton").css("opacity", 1);
+        $("#button #rockbutton").css("opacity", 0.6);
         break;
     case "Paper":
         input = 1;
+        $("#button #rockbutton, #scissorsbutton").css("opacity", 1);
+        $("#button #paperbutton").css("opacity", 0.6);
         break;
     case "Scissors":
         input = 2;
+        $("#button #paperbutton, #rockbutton").css("opacity", 1);
+        $("#button #scissorsbutton").css("opacity", 0.6);
         break;
     } 
     $("#head").html("<img src= " + displayedChoice[input] + " alt='HeadImage'></img>");
 };
 
-// gen counter value
-function randomInput() {
-    aiInput = Math.floor(Math.random() * 3);
+// gen random value
+function randomNum() {
+    return Math.floor(Math.random() * 3);
 };
 
 // compare values 
 function fight() {
+    aiInput = randomNum();
     var answer = input - aiInput;
 
     if (answer == 0) {
@@ -51,7 +58,6 @@ function fight() {
 
 $(document).on("keypress", function(enter){
     if (enter.key == "Enter"){
-        randomInput();
         $("#head").after("<p> " + aiInput + " </p>");
         fight();
     }
