@@ -4,12 +4,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.wrap {
-    padding: 0px;
-    display: grid;
-    justify-content: center;
-}
-
 h1 {
     font-size: 48px;
     font-weight: normal;
@@ -22,6 +16,21 @@ h2 {
     font-weight: normal;
     text-align: center;
 }
+
+.wrap {
+    padding: 15px;
+    display: grid;
+    justify-content: center;
+}
+
+.game-images {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+
 
 .button {
     background-color: #4CAF50; /* Green */

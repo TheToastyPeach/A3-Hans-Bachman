@@ -22,7 +22,7 @@ function buttonPress(clicked) {
         $("#button #scissorsbutton").css("opacity", 0.6);
         break;
     } 
-    $("#head").html("<img src= " + displayedChoice[input] + " alt='HeadImage'></img>");
+    $("#userChoice").html("<img src= " + displayedChoice[input] + " alt='HeadImage'></img>");
 };
 
 // gen random value
@@ -58,7 +58,7 @@ function fight() {
 
 $(document).on("keypress", function(enter){
     if (enter.key == "Enter"){
-        $("#head").after("<p> " + aiInput + " </p>");
+        $("#userChoice").after("<p> " + aiInput + " </p>");
         fight();
     }
 });
