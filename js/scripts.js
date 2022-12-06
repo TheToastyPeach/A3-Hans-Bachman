@@ -1,11 +1,11 @@
 // inputs
 var input = "";
 var aiInput = 0;
-
+var displayedChoice = ["./imgs/head1.png", "./imgs/head2.png", "./imgs/head3.png"];
 
 // get user value
-function buttonPress(hotsex) {
-    switch(hotsex) {
+function buttonPress(clicked) {
+    switch(clicked) {
     case "Rock":
         input = 0;
         break;
@@ -16,6 +16,7 @@ function buttonPress(hotsex) {
         input = 2;
         break;
     } 
+    $("#head").html("<img src= " + displayedChoice[input] + " alt='HeadImage'></img>");
 };
 
 // gen counter value
@@ -51,6 +52,7 @@ function fight() {
 $(document).on("keypress", function(enter){
     if (enter.key == "Enter"){
         randomInput();
+        $("#head").after("<p> " + aiInput + " </p>");
         fight();
     }
 });
