@@ -76,7 +76,7 @@ function fight() {
     }
 
     if (answer == 0) {
-        //Tie
+        //tie
         $(".results").css("color", "black")
         return "It's a tie!";
     }
@@ -110,3 +110,8 @@ function tutorial(){
     }
 
 }
+
+
+
+//NOT MINE 
+

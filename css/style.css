@@ -79,6 +79,10 @@ sup {
     opacity: 1;
 }
 
+#gify-embed-con {
+    position: absolute;
+    background-position-x: 0;
+}
 
 /* #F0EBD8 #748CAB #3E5C76 #1D2D44 #0D1321
  */
