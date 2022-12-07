@@ -1,8 +1,23 @@
 
 body {
-    margin: 10px;
+    margin: 0px;
     font-family: 'Lato', sans-serif;
 }
+
+header{
+    background-color: #FCEEEF;
+    border-radius: 0px 0px 20px 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+footer {
+    background-color: #FCEEEF;
+    border-radius: 20px 20px 0px 0px;
+}
+
 
 h1 {
     font-size: 48px;
@@ -17,34 +32,53 @@ h2 {
     text-align: center;
 }
 
+sup {
+    text-decoration: underline;
+    color: #0FB78F;
+}
+
+
+
 .wrap {
-    padding: 15px;
+    padding: 20px;
     display: grid;
     justify-content: center;
 }
 
 .game-images {
+    padding-top: 25px;
     display: grid;
     grid-template-columns: 300px 300px;
     justify-content: center;
     column-gap: 25px;
 }
 
+.tutorial {
+    text-align: center;
+}
+
 .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
+    background-color: #0FB78F;
     color: white;
     width: 150px;
     padding: 10px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
-  }
+    border-radius: 4px;
+    transition-duration: 0.6s;
+}
+
+.button:hover {
+    border-radius: 16px;
+    color: black;
+}
+
 
 #button {
     opacity: 1;
 }
+
 
 /* #F0EBD8 #748CAB #3E5C76 #1D2D44 #0D1321
  */

@@ -1,6 +1,7 @@
 // inputs
 var input = "";
 var aiInput = 0;
+var tutSwitch = false;
 
 // rock images
 var displayedChoiceRocks = ["./imgs/head1.png", "./imgs/head2.png", "./imgs/head3.png"];
@@ -75,15 +76,18 @@ function fight() {
     }
 
     if (answer == 0) {
-     //Tie
-     return "It's a tie!";
+        //Tie
+        $(".results").css("color", "black")
+        return "It's a tie!";
     }
     else if (answer == input || answer == -2) {
         //win
+        $(".results").css("color", "green")
         return "You've won!";
     }
     else {
         //lose
+        $(".results").css("color", "red")
         return "You've lost!";
     }
     
@@ -92,6 +96,17 @@ function fight() {
 //compare the choices on keypress
 $(document).on("keypress", function(enter){
     if (enter.key == "Enter"){
-        $("#results").html("<h1>" + fight() + "</h1>");
+        $(".results").html("<h1>" + fight() + "</h1>");
     }
 });
+
+function tutorial(){
+    tutSwitch = !tutSwitch;
+    if (tutSwitch){
+        $(".tutorial").html("<p onclick='tutorial()'><sup>Hide</sup></p><p>Click the option your wish to choose, then just hit <em>Enter</em> to play!</p>");
+    }
+    else {
+        $(".tutorial").html("<p onclick='tutorial()'><sup>How to play?</sup></p>");
+    }
+
+}
