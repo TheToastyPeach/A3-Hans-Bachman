@@ -27,7 +27,7 @@ function buttonPress(clicked) {
         $("#button #rockbutton").css("opacity", 0.6);
 
         // gets a random rock image
-        $("#userChoice").html("<img src= " + displayedChoiceRocks[randomNum()] + " alt='HeadImage'></img>");
+        $("#userChoice").html("<img src= ./imgs/Rock" + randomNum() + ".png alt='Rock Image'></img>");
         break;
 
     case "Paper":
@@ -37,7 +37,7 @@ function buttonPress(clicked) {
         $("#button #paperbutton").css("opacity", 0.6);
 
         // gets a random paper image
-        $("#userChoice").html("<img src= " + displayedChoicePapers[randomNum()] + " alt='HeadImage'></img>");
+        $("#userChoice").html("<img src= ./imgs/Paper" + randomNum() + ".png alt='Paper Image'></img>");
         break;
 
     case "Scissors":
@@ -47,7 +47,7 @@ function buttonPress(clicked) {
         $("#button #scissorsbutton").css("opacity", 0.6);
 
         // gets a random scissor image
-        $("#userChoice").html("<img src= " + displayedChoiceScissors[randomNum()] + " alt='HeadImage'></img>");
+        $("#userChoice").html("<img src= ./imgs/Scissor" + randomNum() + ".png alt='Scissor Image'></img>");
         break;
     } 
 
@@ -63,15 +63,15 @@ function fight() {
     switch(aiInput) {
         case 0:
             // gets a random rock image
-            $("#randomChoice").html("<img src= " + displayedChoiceRocks[randomNum()] + " alt='HeadImage'></img>");
+            $("#randomChoice").html("<img src= ./imgs/Rock" + randomNum() + ".png alt='Paper Image'></img>");
         break;
         case 1:
             // gets a random paper image
-            $("#randomChoice").html("<img src= " + displayedChoicePapers[randomNum()] + " alt='HeadImage'></img>");
+            $("#randomChoice").html("<img src= ./imgs/Paper" + randomNum() + ".png alt='Paper Image'></img>");
         break;
         case 2:
             // gets a random scissor image
-            $("#randomChoice").html("<img src= " + displayedChoiceScissors[randomNum()] + " alt='HeadImage'></img>");
+            $("#randomChoice").html("<img src= ./imgs/Scissor" + randomNum() + ".png alt='Scissor Image'></img>");
         break;
     }
 
