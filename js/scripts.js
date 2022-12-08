@@ -2,15 +2,9 @@
 var input = "";
 var aiInput = 0;
 var tutSwitch = false;
-
-// rock images
-var displayedChoiceRocks = ["./imgs/head1.png", "./imgs/head2.png", "./imgs/head3.png"];
-
-// paper images
-var displayedChoicePapers = ["./imgs/body1.png", "./imgs/body2.png", "./imgs/body3.png"];
-
-// scissor images
-var displayedChoiceScissors = ["./imgs/foot1.png", "./imgs/foot2.png", "./imgs/foot3.png"]; 
+var sourceSwitch = false;
+var boom = document.getElementById("boom");
+var bingBong = document.getElementById("bingBong");
 
 // gen random value
 function randomNum() {
@@ -57,8 +51,6 @@ function buttonPress(clicked) {
 
 };
 
-
-
 // compare values 
 function fight() {
     aiInput = randomNum();
@@ -92,7 +84,7 @@ function fight() {
         setTimeout(function() {
             $(".gif-display-win").hide();
         }, 2000);
-
+        bingBong.play();
         return "You've won!";
     }
     else {
@@ -103,6 +95,7 @@ function fight() {
         setTimeout(function() {
             $(".gif-display-lose").hide();
         }, 800);
+        boom.play();
         return "You've lost!";
     }
     
@@ -123,6 +116,18 @@ function tutorial(){
     }
     else {
         $(".tutorial").html("<p onclick='tutorial()'><sup>How to play?</sup></p>");
+    }
+
+}
+
+// sources button
+function sources(){
+    sourceSwitch = !sourceSwitch;
+    if (sourceSwitch){
+        $(".sources").html("<p onclick='sources()'><sup>Close</sup></p><ul>Sounds & gifs:<li>https://freesound.org/people/Bertrof/sounds/131660/</li><li>https://freesound.org/people/ljudman/sounds/33245/</li><li>https://giphy.com/stickers/explosion-bang-pow-gJ1zlEIw4c30qpyooF?utm_source=iframe&utm_medium=embed&utm_campaign=Embeds&utm_term=</li><li>https://giphy.com/stickers/kurzgesagt-space-universe-infographic-RkN33Se0a99r6pMiZi?utm_source=iframe&utm_medium=embed&utm_campaign=Embeds&utm_term=http%3A%2F%2F127.0.0.1%3A5500%2F</li></ul><p>All images are fair use!</p>");
+    }
+    else {
+        $(".sources").html("<p onclick='sources()'><sup>Sources?</sup></p>");
     }
 
 }

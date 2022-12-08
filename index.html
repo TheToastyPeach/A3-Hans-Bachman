@@ -6,7 +6,14 @@
     <title>Assignment 4</title>
 
     <link rel="stylesheet" href="css/style.css">
-
+    <audio id="boom">
+        <source src="./sound/boom.wav" type="audio/wav">
+        <p>Your browser does not support the audio</p>
+    </audio>
+    <audio id="bingBong">
+        <source src="./sound/bing-bong.wav" type="audio/wav">
+        <p>Your browser does not support the audio</p>
+    </audio>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +27,6 @@
         <div id="Title">
             <h1>Rock, Paper, Scissors!</h1>
         </div>
-
-        
     </header>
 
     <!-- Image Display -->
@@ -44,21 +49,9 @@
             <a class="button" value="Scissors" id="scissorsbutton" onclick="buttonPress('Scissors')">Scissors</a>
         </div>
         <div class="results">
- <!-- 
-            <iframe src="https://giphy.com/embed/RkN33Se0a99r6pMiZi" width="480" height="480" frameBorder="0" id="giphy-embed-con" allowFullScreen></iframe>
-            
-            <iframe src="https://giphy.com/embed/ekvjSltNbJFtRG4V22" width="384" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
-            <iframe src="https://giphy.com/embed/cMcDO2SSOSUfi4wNe9" width="480" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
-            <iframe src="https://giphy.com/embed/gJ1zlEIw4c30qpyooF" width="480" height="478" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
-
-
-            -->
-
         </div>
 
+        <!-- Win and loss gifs -->
         <div class="gif-display-win">
             <img class="gif-display-size" src="./imgs/win.gif" alt="winning gif" ></img>
         </div>
@@ -67,18 +60,15 @@
             <img class="gif-display-size" src="./imgs/lose.gif" alt="losing gif" ></img>
         </div>
 
+        <!-- Tutorial button -->
         <div class="tutorial">
             <p onclick="tutorial()"><sup>How to play?</sup></p>
         </div>
-
-
-        <!-- NOT MINE -->
-        
-
-
     </section>
 
-
+    <footer class="sources">
+        <p onclick="sources()"><sup>Sources?</sup></p>
+    </footer>
 
 
     <!-- JS links -->
@@ -86,6 +76,6 @@
     <script src="js/scripts.js"></script>
 
 
-</body>
+    </body>
 
 </html>

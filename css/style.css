@@ -16,6 +16,12 @@ header{
 footer {
     background-color: #FCEEEF;
     border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0px;
+    left:25%;
+    width: 50%;
 }
 
 
@@ -35,6 +41,16 @@ h2 {
 sup {
     text-decoration: underline;
     color: #0FB78F;
+}
+
+ul {
+    font-weight: bold;
+    text-align: left;
+}
+
+li {
+    text-align: left;
+    font-weight: normal;
 }
 
 .gif-display-win {
