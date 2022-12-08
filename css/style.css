@@ -37,6 +37,22 @@ sup {
     color: #0FB78F;
 }
 
+.gif-display-win {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.gif-display-lose {
+    position: absolute;
+    left: 30%;
+    top: 15%;
+}
+
+.gif-display-size {
+    width: 750px;
+    height: 750px;
+}
 
 
 .wrap {

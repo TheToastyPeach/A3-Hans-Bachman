@@ -17,6 +17,10 @@ function randomNum() {
     return Math.floor(Math.random() * 3);
 };
 
+// hide gifs 
+$(".gif-display-win").hide();
+$(".gif-display-lose").hide();
+
 // get user value & mutes the buttons
 function buttonPress(clicked) {
     switch(clicked) {
@@ -83,23 +87,35 @@ function fight() {
     else if (answer == input || answer == -2) {
         //win
         $(".results").css("color", "green")
+        //show winning gif
+        $(".gif-display-win").show();
+        setTimeout(function() {
+            $(".gif-display-win").hide();
+        }, 2000);
+
         return "You've won!";
     }
     else {
         //lose
         $(".results").css("color", "red")
+        //show losing gif
+        $(".gif-display-lose").show();
+        setTimeout(function() {
+            $(".gif-display-lose").hide();
+        }, 800);
         return "You've lost!";
     }
     
 };
 
-//compare the choices on keypress
+// compare the choices on keypress
 $(document).on("keypress", function(enter){
     if (enter.key == "Enter"){
         $(".results").html("<h1>" + fight() + "</h1>");
     }
 });
 
+// tutorial button
 function tutorial(){
     tutSwitch = !tutSwitch;
     if (tutSwitch){
@@ -113,5 +129,4 @@ function tutorial(){
 
 
 
-//NOT MINE 
 
